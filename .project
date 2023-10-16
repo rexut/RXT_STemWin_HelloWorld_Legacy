@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>STemWin_HelloWorld</name>
+	<comment></comment>
+	<projects>
+		<project>STemWin_HelloWorld_STM32F723IEKx</project>
+		<project>STemWin_HelloWorld_STM32F730I8Kx</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.st.stm32cube.ide.mcu.MCUEndUserApplicationProjectNature</nature>
+	</natures>
+</projectDescription>
