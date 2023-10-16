@@ -169,7 +169,11 @@ void SystemInit(void)
 #ifdef VECT_TAB_SRAM
   SCB->VTOR = SRAM1_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM */
 #else
+#if defined(USE_STM32F7308_DISCO)
   SCB->VTOR = APPLICATION_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation to APPLICATION_ADDRESS in preprocessor defines */
+#else
+#error Can't define SCB->VTOR, specific board name isn't defined!
+#endif
 #endif
 }
 

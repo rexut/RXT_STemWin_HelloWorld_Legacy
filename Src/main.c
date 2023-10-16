@@ -279,6 +279,8 @@ static void MPU_ConfigPSRAM(void)
   /* Disable the MPU */
   HAL_MPU_Disable();
 
+#if defined(USE_STM32F7308_DISCO)
+
   /* Configure the MPU attributes for TFT-LCD with recommended configurations:
      Normal memory, Shareable, write-back */
   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
@@ -294,6 +296,10 @@ static void MPU_ConfigPSRAM(void)
   MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_ENABLE;
 
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
+
+#else
+#error Can't setup MPU regions, specific board name isn't defined!
+#endif
 
   /* Enable the MPU */
   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
