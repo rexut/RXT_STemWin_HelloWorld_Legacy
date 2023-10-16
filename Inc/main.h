@@ -28,6 +28,9 @@
 #if defined(USE_STM32F7308_DISCO)
 #include "stm32f7308_discovery.h"
 #include "stm32f7308_discovery_lcd.h"
+#elif defined(USE_STM32F723E_DISCO)
+#include "stm32f723e_discovery.h"
+#include "stm32f723e_discovery_lcd.h"
 #else
 #error Can't include EVAL components, specific board name isn't defined!
 #endif
