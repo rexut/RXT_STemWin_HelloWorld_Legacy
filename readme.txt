@@ -112,7 +112,7 @@ In order to load this application to the external memory:
             - Open the STM32CubeProgrammer tool
             - Select the QSPI external flash loader "MX25L512G_STM32F7308-DISCO"
             - From Erasing & Programming menu, browse and open the output binary file relative to your application
-            - Load the file into the external QSPI flash using "Start Programming" at the address APPLICATION_ADDRESS (0x90000000)
+            - Load the file into the external QSPI flash using "Start Programming" at the address QSPI_BASE (0x90000000)
   
 
  */
