@@ -52,16 +52,16 @@ LED5 and LED6 are toggling continuously as a background task to indicate that th
 
 Display, Graphic, STemWin, HelloWorld, LCD, GUI
 
-@Note If the user code size exceeds the DTCM-RAM size or starts from internal cacheable memories (SRAM1 and SRAM2),that is shared between several processors,
-      then it is highly recommended to enable the CPU cache and maintain its coherence at application level.
-      The address and the size of cacheable buffers (shared between CPU and other masters)  must be properly updated to be aligned to cache line size (32 bytes).
+@Note If the user code size exceeds the DTCM-RAM size or starts from internal cacheable memories (SRAM1 and SRAM2),that is shared between several processors,
+      then it is highly recommended to enable the CPU cache and maintain its coherence at application level.
+      The address and the size of cacheable buffers (shared between CPU and other masters)  must be properly updated to be aligned to cache line size (32 bytes).
 
 @Note It is recommended to enable the cache and maintain its coherence, but depending on the use case
-      It is also possible to configure the MPU as "Write through", to guarantee the write access coherence.
-      In that case, the MPU must be configured as Cacheable/Bufferable/Not Shareable.
-      Even though the user must manage the cache coherence for read accesses.
-      Please refer to the AN4838 “Managing memory protection unit (MPU) in STM32 MCUs”
-      Please refer to the AN4839 “Level 1 cache on STM32F7 Series”
+      It is also possible to configure the MPU as "Write through", to guarantee the write access coherence.
+      In that case, the MPU must be configured as Cacheable/Bufferable/Not Shareable.
+      Even though the user must manage the cache coherence for read accesses.
+      Please refer to the AN4838 "Managing memory protection unit (MPU) in STM32 MCUs"
+      Please refer to the AN4839 "Level 1 cache on STM32F7 Series"
 
 @par Directory contents 
 
