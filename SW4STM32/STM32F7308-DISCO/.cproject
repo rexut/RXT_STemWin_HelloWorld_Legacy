@@ -50,8 +50,6 @@
 									<listOptionValue builtIn="false" value="../../../Drivers/BSP/Components/Common"/>
 									<listOptionValue builtIn="false" value="../../../Drivers/BSP/Components"/>
 									<listOptionValue builtIn="false" value="../../../Middlewares/ST/STemWin/inc"/>
-									<listOptionValue builtIn="false" value="../../../Utilities"/>
-									<listOptionValue builtIn="false" value="../../../Utilities/Fonts"/>
 									<listOptionValue builtIn="false" value="../../../Drivers/CMSIS/Include"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.definedsymbols.1140510202" name="Define symbols (-D)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.definedsymbols" useByScannerDiscovery="false" valueType="definedSymbols">
