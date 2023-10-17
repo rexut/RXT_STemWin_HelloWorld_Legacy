@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>STemWin_HelloWorld</name>
+	<name>RXT_STemWin_HelloWorld</name>
 	<comment></comment>
 	<projects>
 		<project>STemWin_HelloWorld_STM32F723IEKx</project>
