@@ -27,19 +27,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>LICENSE.txt</name>
+			<name>Doc/LICENSE.txt</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/LICENSE.txt</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/LICENSE.txt</locationURI>
 		</link>
 		<link>
-			<name>MCD-ST Image SW License Agreement V2.pdf</name>
+			<name>Doc/MCD-ST Image SW License Agreement V2.pdf</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Middlewares/ST/STemWin/Lib/MCD-ST%20Image%20SW%20License%20Agreement%20V2.pdf</locationURI>
-		</link>
-		<link>
-			<name>readme.txt</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/readme.txt</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/Middlewares/ST/STemWin/Lib/MCD-ST%20Image%20SW%20License%20Agreement%20V2.pdf</locationURI>
 		</link>
 		<link>
 			<name>Doc/readme.txt</name>
