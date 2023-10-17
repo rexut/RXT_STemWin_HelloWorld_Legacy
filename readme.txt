@@ -29,16 +29,16 @@ e.g. the STM32F723E_DISCOVERY based on STM32F723xx.
 
 The application allows also to run the different Segger samples that can be
 downloaded from here: http://www.segger.com/emwin-samples.html To do this,
-user has only to replace the file "RXT_STemWin_HelloWorld/Src/BASIC_HelloWorld.c"
-into the project workspace by the downloaded one.
+user has only to replace the file "<TOP>/Src/BASIC_HelloWorld.c" into the
+project workspace by the downloaded one.
 
 Note that the following user files may need to be updated:
-  RXT_STemWin_HelloWorld/Src/LCDConf.c
-  RXT_STemWin_HelloWorld/Src/GUIConf.c
+  <TOP>/Src/<BOARD>/LCDConf.c
+  <TOP>/Src/<BOARD>/GUIConf.c
 (if for example more GUI allocated memory is needed)
 
-LED5 and LED6 are toggling continuously as a background task to indicate that
-the application is running successfully.
+LED_RED and LED_GREEN are toggling continuously as a background task to
+indicate that the application is running successfully.
 
 @note Care must be taken when using HAL_Delay(), this function provides
       accurate delay (in milliseconds) based on variable incremented in
@@ -73,17 +73,17 @@ Display, Graphic, STemWin, HelloWorld, LCD, GUI
 
 @par Directory contents
 
-  - RXT_STemWin_HelloWorld/Inc/GUIConf.h                Header for GUIConf.c
-  - RXT_STemWin_HelloWorld/Inc/LCDConf.h                Header for LCDConf*.c
-  - RXT_STemWin_HelloWorld/Inc/main.h                   Main program header file
-  - RXT_STemWin_HelloWorld/Inc/stm32f7xx_hal_conf.h     Library Configuration file
-  - RXT_STemWin_HelloWorld/Inc/stm32f7xx_it.h           Interrupt handlers header file
-  - RXT_STemWin_HelloWorld/Src/BASIC_HelloWorld.c       Simple demo drawing "Hello world"
-  - RXT_STemWin_HelloWorld/Src/GUIConf.c                Display controller initialization
-  - RXT_STemWin_HelloWorld/Src/LCDConf.c                Configuration file for the GUI library
-  - RXT_STemWin_HelloWorld/Src/main.c                   Main program file
-  - RXT_STemWin_HelloWorld/Src/stm32f7xx_it.c           STM32F7xx Interrupt handlers
-  - RXT_STemWin_HelloWorld/Src/system_stm32f7xx.c       STM32F7xx system file
+  - <TOP>/Inc/LCDConf.h                     Header for LCDConf*.c
+  - <TOP>/Inc/<BOARD>/GUIConf.h             Header for GUIConf.c
+  - <TOP>/Inc/<BOARD>/main.h                Main program header file
+  - <TOP>/Inc/<BOARD>/stm32f7xx_hal_conf.h  Library Configuration file
+  - <TOP>/Inc/<BOARD>/stm32f7xx_it.h        Interrupt handlers header file
+  - <TOP>/Src/<BOARD>/LCDConf.c             Configuration file for the GUI library
+  - <TOP>/Src/<BOARD>/GUIConf.c             Display controller initialization
+  - <TOP>/Src/<BOARD>/main.c                Main program file
+  - <TOP>/Src/<BOARD>/stm32f7xx_it.c        STM32F7xx Interrupt handlers
+  - <TOP>/Src/<BOARD>/system_stm32f7xx.c    STM32F7xx system file
+  - <TOP>/Src/BASIC_HelloWorld.c            Simple demo drawing "Hello world"
 
 @par Hardware and Software environment
 

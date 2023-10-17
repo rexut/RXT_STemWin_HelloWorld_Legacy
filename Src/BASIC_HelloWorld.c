@@ -34,7 +34,7 @@ Purpose     : Simple demo drawing "Hello world"
 */
 void MainTask(void) {
   GUI_Clear();
-  GUI_SetFont(&GUI_Font20_1);
+  GUI_SetFont(GUI_DEFAULT_FONT);
   GUI_DispStringAt("Hello world!", (LCD_GetXSize()-100)/2, (LCD_GetYSize()-20)/2);
   while(1);
 }

@@ -115,7 +115,7 @@ void SysTick_Handler(void)
 {
   /* Update the LocalTime by adding 1 ms each SysTick interrupt */
   HAL_IncTick();
-  
+
   OS_TimeMS++;
 }
 

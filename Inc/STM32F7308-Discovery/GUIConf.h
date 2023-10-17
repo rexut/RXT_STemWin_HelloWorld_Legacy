@@ -27,9 +27,9 @@ Full source code is available at: www.segger.com
 
 We appreciate your understanding and fairness.
 ----------------------------------------------------------------------
-File        : GUIConf.c
-Purpose     : Display controller initialization
----------------------------END-OF-HEADER------------------------------
+File        : GUIConf.h
+Purpose     : Configures emWins abilities, fonts etc.
+----------------------------------------------------------------------
 */
 
 /**
@@ -46,40 +46,47 @@ Purpose     : Display controller initialization
   ******************************************************************************
   */
 
-#include "GUI.h"
+#ifndef GUICONF_H
+#define GUICONF_H
 
 /*********************************************************************
 *
-*       Defines
-*
-**********************************************************************
+*       Multi layer/display support
 */
-//
-// Define the available number of bytes available for the GUI
-//
-#define GUI_NUMBYTES  (1024) *  150
-
-U32 aMemory[GUI_NUMBYTES / 4];
+#define GUI_NUM_LAYERS            2    // Maximum number of available layers
 
 /*********************************************************************
 *
-*       Public code
-*
-**********************************************************************
+*       Multi tasking support
 */
+#ifdef OS_SUPPORT
+ #define GUI_OS                    (1)  // Compile with multitasking support
+#else
+ #define GUI_OS                    (0)
+#endif
+
 /*********************************************************************
 *
-*       GUI_X_Config
-*
-* Purpose:
-*   Called during the initialization process in order to set up the
-*   available memory for the GUI.
+*       Configuration of touch support
 */
-void GUI_X_Config(void) 
-{
-  //
-  // Assign memory to STemWin
-  //
-  GUI_ALLOC_AssignMemory(aMemory, GUI_NUMBYTES);
-}
+#ifndef   GUI_SUPPORT_TOUCH
+  #define GUI_SUPPORT_TOUCH       (1)  // Support touchscreen
+#endif
 
+/*********************************************************************
+*
+*       Default font
+*/
+#define GUI_DEFAULT_FONT          &GUI_Font20_1
+
+/*********************************************************************
+*
+*         Configuration of available packages
+*/
+#define GUI_SUPPORT_MOUSE             (1)    /* Support a mouse */
+#define GUI_WINSUPPORT                (1)    /* Use window manager */
+#define GUI_SUPPORT_MEMDEV            (1)    /* Memory device package available */
+#define GUI_SUPPORT_DEVICES           (1)    /* Enable use of device pointers */
+#define GUI_USE_ARGB                  (0)    /* The color format to use is ARGB */
+
+#endif  /* Avoid multiple inclusion */

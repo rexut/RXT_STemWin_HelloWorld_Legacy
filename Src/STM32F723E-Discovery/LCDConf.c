@@ -27,14 +27,14 @@
 /** @defgroup LCD CONFIGURATION
 * @brief This file contains the LCD Configuration
 * @{
-*/ 
+*/
 
 /** @defgroup LCD CONFIGURATION_Private_TypesDefinitions
 * @{
-*/ 
+*/
 /**
 * @}
-*/ 
+*/
 
 /** @defgroup LCD CONFIGURATION_Private_Defines
 * @{
@@ -86,7 +86,7 @@ typedef struct
 
 
 /* We use BANK2 as we use FMC_NE2 signal */
-#define FMC_BANK2_BASE  ((uint32_t)(0x60000000 | 0x04000000))  
+#define FMC_BANK2_BASE  ((uint32_t)(0x60000000 | 0x04000000))
 #define FMC_BANK2       ((LCD_CONTROLLER_TypeDef *) FMC_BANK2_BASE)
 
 /*********************************************************************
@@ -106,7 +106,7 @@ static uint16_t STM_FSMC_BANK1_ReadData(void);
 * Function description:
 *   Sets display register
 */
-static void LcdWriteReg(U16 Data) 
+static void LcdWriteReg(U16 Data)
 {
   STM_FSMC_BANK1_WriteReg(Data);
   __DSB();
@@ -119,7 +119,7 @@ static void LcdWriteReg(U16 Data)
 * Function description:
 *   Writes a value to a display register
 */
-static void LcdWriteData(U16 Data) 
+static void LcdWriteData(U16 Data)
 {
   STM_FSMC_BANK1_WriteData (Data);
   __DSB();
@@ -132,10 +132,10 @@ static void LcdWriteData(U16 Data)
 * Function description:
 *   Writes multiple values to a display register.
 */
-static void LcdWriteDataMultiple(U16 * pData, int NumItems) 
+static void LcdWriteDataMultiple(U16 * pData, int NumItems)
 {
-  
-  while (NumItems--) 
+
+  while (NumItems--)
   {
     STM_FSMC_BANK1_WriteData(*pData++);
     __DSB();
@@ -149,10 +149,10 @@ static void LcdWriteDataMultiple(U16 * pData, int NumItems)
 * Function description:
 *   Reads multiple values from a display register.
 */
-static void LcdReadDataMultiple(U16 * pData, int NumItems) 
+static void LcdReadDataMultiple(U16 * pData, int NumItems)
 {
-  
-  while (NumItems--) 
+
+  while (NumItems--)
   {
     *pData++ = STM_FSMC_BANK1_ReadData();
   }
@@ -171,9 +171,9 @@ static void LcdReadDataMultiple(U16 * pData, int NumItems)
   * @retval LCD state
   */
 void LCD_LL_Init(void)
-{     
+{
   /* LCD Init */
-  BSP_LCD_InitEx(LCD_ORIENTATION_LANDSCAPE_ROT180);  
+  BSP_LCD_InitEx(LCD_ORIENTATION_LANDSCAPE_ROT180);
 }
 
 /*********************************************************************
@@ -185,7 +185,7 @@ void LCD_LL_Init(void)
 *   display driver configuration.
 *
 */
-void LCD_X_Config(void) 
+void LCD_X_Config(void)
 {
   GUI_DEVICE * pDevice;
   CONFIG_FLEXCOLOR Config = {0};
@@ -195,11 +195,11 @@ void LCD_X_Config(void)
   pDevice = GUI_DEVICE_CreateAndLink(GUIDRV_FLEXCOLOR, GUICC_M565, 0, 0);
 
 
-    
-  Config.Orientation = GUI_MIRROR_Y | GUI_MIRROR_X; 
+
+  Config.Orientation = GUI_MIRROR_Y | GUI_MIRROR_X;
   GUIDRV_FlexColor_Config(pDevice, &Config);
 
-  
+
   /* Display driver configuration, required for Lin-driver */
   LCD_SetSizeEx (0, XSIZE_PHYS , YSIZE_PHYS);
   LCD_SetVSizeEx(0, VXSIZE_PHYS, VYSIZE_PHYS);
@@ -240,12 +240,12 @@ int LCD_X_DisplayDriver(unsigned LayerIndex, unsigned Cmd, void * pData) {
   int r;
   (void) LayerIndex;
   (void) pData;
-  
+
   switch (Cmd) {
   case LCD_X_INITCONTROLLER: {
-    
+
     LCD_LL_Init();
-    
+
     return 0;
   }
   default:
@@ -256,25 +256,25 @@ int LCD_X_DisplayDriver(unsigned LayerIndex, unsigned Cmd, void * pData) {
 
 /**
   * @brief  Writes register value.
-  * @param  Data: 
+  * @param  Data:
   * @retval None
   */
-static void STM_FSMC_BANK1_WriteData(uint16_t Data) 
-{  
+static void STM_FSMC_BANK1_WriteData(uint16_t Data)
+{
   /* Write 16-bit Reg */
-  FMC_BANK2->RAM = Data;  
+  FMC_BANK2->RAM = Data;
   __DSB();
 }
 
 /**
   * @brief  Writes register address.
-  * @param  Reg: 
+  * @param  Reg:
   * @retval None
   */
-static void STM_FSMC_BANK1_WriteReg(uint8_t Reg) 
-{ 
+static void STM_FSMC_BANK1_WriteReg(uint8_t Reg)
+{
   /* Write 16-bit Index, then write register */
-  FMC_BANK2->REG = Reg;  
+  FMC_BANK2->REG = Reg;
   __DSB();
 }
 
@@ -283,9 +283,9 @@ static void STM_FSMC_BANK1_WriteReg(uint8_t Reg)
   * @param  None
   * @retval Read value
   */
-static uint16_t STM_FSMC_BANK1_ReadData(void) 
+static uint16_t STM_FSMC_BANK1_ReadData(void)
 {
-  return FMC_BANK2->RAM;  
+  return FMC_BANK2->RAM;
 }
 
 

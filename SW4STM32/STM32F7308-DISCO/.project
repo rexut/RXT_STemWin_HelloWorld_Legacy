@@ -59,17 +59,17 @@
 		<link>
 			<name>Application/User/main.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Src/main.c</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/STM32F7308-Discovery/main.c</locationURI>
 		</link>
 		<link>
 			<name>Application/User/stm32f7xx_it.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Src/stm32f7xx_it.c</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/STM32F7308-Discovery/stm32f7xx_it.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/CMSIS/system_stm32f7xx.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Src/system_stm32f7xx.c</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/STM32F7308-Discovery/system_stm32f7xx.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32F7xx_HAL_Driver/stm32f7xx_hal.c</name>
@@ -189,7 +189,7 @@
 		<link>
 			<name>Middlewares/STemWin/Config/GUIConf.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Src/GUIConf.c</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/STM32F7308-Discovery/GUIConf.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/STemWin/Config/GUI_X.c</name>
@@ -199,7 +199,7 @@
 		<link>
 			<name>Middlewares/STemWin/Config/LCDConf.c</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Src/LCDConf.c</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/STM32F7308-Discovery/LCDConf.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

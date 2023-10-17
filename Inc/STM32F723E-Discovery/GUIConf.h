@@ -45,7 +45,7 @@ Purpose     : Configures emWins abilities, fonts etc.
   *
   ******************************************************************************
   */
- 
+
 #ifndef GUICONF_H
 #define GUICONF_H
 
@@ -77,7 +77,7 @@ Purpose     : Configures emWins abilities, fonts etc.
 *
 *       Default font
 */
-#define GUI_DEFAULT_FONT          &GUI_Font6x8
+#define GUI_DEFAULT_FONT          &GUI_Font20_1
 
 /*********************************************************************
 *
