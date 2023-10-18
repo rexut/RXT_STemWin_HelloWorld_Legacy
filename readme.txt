@@ -21,7 +21,10 @@
 
 @par Application Description
 
-Simple "Hello World" example based on STemWin.
+Simple "Hello World" example based on STemWin. Supported boards are:
+  - 32F769IDISCOVERY, a.k.a. STM32F769I-DISCO, based on STM32F769NIHx
+  - 32F723EDISCOVERY, a.k.a. STM32F723E-DISCO, based on STM32F723IEKx
+  - STM32F7308-DISCO, a.k.a. STM32F7308-DK, based on STM32F730I8Kx
 
 In this application, the code is executed from QSPI external memory while data
 are in internal SRAM memory, except on systems with sufficient internal memory,
@@ -124,6 +127,7 @@ In order to load this application to the external memory:
           - Select the QSPI external flash loader depending on board:
             - "MX25L512G_STM32F7308-DISCO.stldr" for STM32F7308_DISCO
             - "MX25L512G_STM32F723E-DISCO.stldr" for STM32F723E_DISCOVERY (not yet)
+            - "MX25L512G_STM32F769I-DISCO.stldr" for STM32F769I_DISCOVERY (not yet)
           - From Erasing & Programming menu, browse and open the output binary
             file relative to your application.
           - Load the file into the external QSPI flash using "Start Programming"
